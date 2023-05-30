@@ -2,7 +2,7 @@
 [![Udacity - Robotics NanoDegree Program](https://s3-us-west-1.amazonaws.com/udacity-robotics/Extra+Images/RoboND_flag.png)](https://www.udacity.com/robotics)
 
 
-![Example image](3d-map.png)   ![Example image](2d-map.png)
+![Example image](3d-map.png)  
 
 ## Overview
 
