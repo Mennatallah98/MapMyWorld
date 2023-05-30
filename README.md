@@ -2,11 +2,11 @@
 [![Udacity - Robotics NanoDegree Program](https://s3-us-west-1.amazonaws.com/udacity-robotics/Extra+Images/RoboND_flag.png)](https://www.udacity.com/robotics)
 
 
-![Example image](3d-map.png)
+![Example image](3d-map.png)   ![Example image](2d-map.png)
 
 ## Overview
 
-This project is the third project in Udacity Robotics Software Engineer nano degree where the world was mapped using [pgm_map_creator] and the robot navigated the world using [navigation_stack] where [amcl] was used for localization.
+This project is the fourth project in Udacity Robotics Software Engineer nano degree where the world was mapped using [rtabmap] which produces both 2D-maps and 3D-maps also can be used for navigation. In addition, [joy] package was used to move the rbot during the mapping of the world
 
 **Keywords:** ROS, amcl, navigation_stack, mapping, localization.
 
@@ -141,8 +141,8 @@ Config file folder/config
 
 
 [ROS]: http://www.ros.org
-[amcl]: http://wiki.ros.org/amcl
-[pgm_map_creator]: https://github.com/udacity/pgm_map_creator.git
+[joy]: http://wiki.ros.org/joy
+[rtabmap]: http://wiki.ros.org/rtabmap_ros
 [navigation_stack]: http://wiki.ros.org/navigation/Tutorials/RobotSetup
 [base_local_planner]: http://wiki.ros.org/base_local_planner
 [costmap]: http://wiki.ros.org/costmap_2d
