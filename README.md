@@ -24,7 +24,17 @@ To install all packages from the this repository as Debian packages use
     sudo apt-get install ros-melodic-navigation
     sudo apt-get install ros-melodic-map-server
     sudo apt-get install ros-melodic-move-base
-    sudo apt-get install ros-melodic-amcl
+    sudo apt install ros-melodic-rtabmap-ros
+    sudo apt install ros-melodic-rtabmap
+    
+To navigate with keyboard 
+
+	sudo apt-get install ros-melodic-teleop-twist-keyboard
+	
+To navigate with joystick
+
+	sudo apt-get install ros-melodic-joy ros-melodic-joystick-drivers
+
     
 Or better, use `rosdep`:
 
@@ -36,7 +46,7 @@ To build from source, clone the latest version from this repository into your ca
 
 	cd catkin_ws/src
 	sudo apt update
-	git clone https://github.com/Mennatallah98/WhereAmI.git
+	git clone https://github.com/Mennatallah98/MapMyWorld.git
 	cd ../
 	rosdep install --from-paths . --ignore-src
 	catkin_make
@@ -53,28 +63,16 @@ Open the world the world in gazebo and rviz with the rbot included
 
 	roslaunch my_robot world.launch
 
+### Mapping
+
 In another window
 
 Run navigation stack with the modified configuration file
 
 	roslaunch my_robot amcl.launch
-	
-### To map the world
 
-For [pgm_map_creator] which has been modified to work with Ubuntu18
+### Navigation
 
-	sudo apt-get install libignition-math2-dev protobuf-compiler
-	cp <YOUR GAZEBO WORLD FILE> src/pgm_map_creator/world/<YOUR GAZEBO WORLD FILE>
-	
-Inside the world file
-	
-	<plugin filename="libcollision_map_creator.so" name="collision_map_creator"/>
-	
-To map the world
-
-	gzserver --verbose src/pgm_map_creator/world/<YOUR GAZEBO WORLD FILE>
-	roslaunch pgm_map_creator request_publisher.launch
-	
 create yaml file simlar to that exsitant in the repistory with measurements based on your world
 
 ## Config files
@@ -115,7 +113,7 @@ Config file folder/config
             │   ├── global_costmap_params.yaml
             │   ├── local_costmap_params.yaml
             │   └── __MACOSX
-            ├── db                                      # db folder for rtabmap db
+            ├── db                                      # db folder for rtabmap database
             │   └── rtabmap.db
             ├── launch                                  # launch folder for launch file
             │   ├── joy.launch
