@@ -6,13 +6,13 @@
 
 ## Overview
 
-This project is the fourth project in Udacity Robotics Software Engineer nano degree where the world was mapped using [rtabmap] which produces both 2D-maps and 3D-maps also can be used for navigation. In addition, [joy] package was used to move the rbot during the mapping of the world
+This project is the fourth project in Udacity Robotics Software Engineer nano degree where the world was mapped using [rtabmap] which produces both 2D-maps and 3D-maps also can be used for navigation. In addition, [joy] package was used to move the rbot during the mapping process and it can also be replaced by [teleop_twist_keyboard].
 
-**Keywords:** ROS, amcl, navigation_stack, mapping, localization.
+**Keywords:** ROS, rtabmap, 3D-map, mapping, navigation, SLAM.
 
 **Author: Mennatallah Aly<br />**
 
-The WhereAmI package has been tested under [ROS] Melodic on Ubuntu 18.04. and Gazebo 9.0.0
+The MapMyWorld package has been tested under [ROS] Melodic on Ubuntu 18.04. and Gazebo 9.0.0
 
 ## Installation
 
@@ -106,42 +106,41 @@ Config file folder/config
 
 ## Structure
 
-    └── MapMyWorld
-        ├── 2d-map.png
-        ├── 3d-map.png
+    └── MapMyWorld                                      # Map My World Project
         └── my_robot
-            ├── CMakeLists.txt
-            ├── config
+            ├── CMakeLists.txt                          # compiler instructions
+            ├── config                                  # config folder for configuration files 
             │   ├── base_local_planner_params.yaml
             │   ├── costmap_common_params.yaml
             │   ├── global_costmap_params.yaml
             │   ├── local_costmap_params.yaml
             │   └── __MACOSX
-            ├── db
+            ├── db                                      # db folder for rtabmap db
             │   └── rtabmap.db
-            ├── launch
+            ├── launch                                  # launch folder for launch file
             │   ├── joy.launch
             │   ├── localization.launch
             │   ├── mapping.launch
             │   ├── robot_description.launch
             │   └── world.launch
-            ├── meshes
+            ├── meshes                                  # meshes folder for sensors
             │   └── hokuyo.dae
-            ├── package.xml
+            ├── package.xml                             # package info
             ├── rviz
             │   └── myworld.rviz
-            ├── scripts
+            ├── scripts                                 # scripts folder for python nodes
             │   └── joy_teleop
-            ├── urdf
+            ├── urdf                                    # urdf folder for xarco files
             │   ├── my_robot.gazebo
             │   └── my_robot.xacro
-            └── worlds
+            └── worlds                                  # world folder for world files
                 └── myworld.world
 
 
 
 [ROS]: http://www.ros.org
 [joy]: http://wiki.ros.org/joy
+[teleop_twist_keyboard]: http://wiki.ros.org/teleop_twist_keyboard
 [rtabmap]: http://wiki.ros.org/rtabmap_ros
 [navigation_stack]: http://wiki.ros.org/navigation/Tutorials/RobotSetup
 [base_local_planner]: http://wiki.ros.org/base_local_planner
