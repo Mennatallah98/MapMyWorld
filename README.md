@@ -65,9 +65,7 @@ Open the world the world in gazebo and rviz with the rbot included
 
 ### Mapping
 
-In another window
-
-Run the teleop node.
+In another window run the teleop node.
 
 For the joystick:
 
@@ -77,7 +75,7 @@ For keyboard:
 
 	rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 	
-Run [rtabmap] in mapping mode.
+In another window run [rtabmap] in mapping mode.
 
 	roslaunch my_robot mapping.launch	
 	
@@ -87,7 +85,7 @@ For a map with clear features go around the world at least 3 times to achieve lo
 
 ### Localization
 
-Run [rtabmap] in localization mode.
+In another window run [rtabmap] in localization mode.
 
 	roslaunch my_robot localization.launch
 
