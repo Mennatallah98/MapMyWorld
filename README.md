@@ -2,7 +2,7 @@
 [![Udacity - Robotics NanoDegree Program](https://s3-us-west-1.amazonaws.com/udacity-robotics/Extra+Images/RoboND_flag.png)](https://www.udacity.com/robotics)
 
 
-![Example image](3d-map.png)  
+![3d-map image](3d-map.png)  
 
 ## Overview
 
@@ -85,9 +85,11 @@ For a map with clear features go around the world at least 3 times to achieve lo
 
 ![loop_closure image](loop_closure.png)  
 
-### Navigation
+### Localization
 
-create yaml file simlar to that exsitant in the repistory with measurements based on your world
+Run [rtabmap] in localization mode.
+
+	roslaunch my_robot localization.launch
 
 ## Config files
 
@@ -113,7 +115,6 @@ Config file folder/config
 
 * **my_robot:** Contains the URDF of r 4-wheeled under the name of my_robot with the attached sensors in addition to the world with robot embbeded in aldo the modified configuartion files and the world map.
 
-* **[pgm_map_creator]:** Draws a map for the Gazebo world.
 
 
 ## Structure
