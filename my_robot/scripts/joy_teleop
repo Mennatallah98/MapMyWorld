@@ -25,23 +25,25 @@ def callback(data):
 
     elif data.buttons[5] == 1: # increase linear speed   #R1 
         linear_speed += 0.05
-        print "linear_speed:" , linear_speed
+        print ("linear_speed:" , linear_speed)
     
     elif data.buttons[7] == 1: # decrease linear speed   #R2
         linear_speed -= 0.05
-        print "linear_speed:" , linear_speed  
+        print ("linear_speed:" , linear_speed)  
 
     elif data.buttons[4] == 1: # increase angular speed  #L1
         angular_speed += 0.05
-        print "angular_speed:" , angular_speed 
+        print ("angular_speed:" , angular_speed) 
 
     elif data.buttons[6] == 1: # increase angular speed  #L2
         angular_speed -= 0.05
-        print "angular_speed:" , angular_speed
+        print ("angular_speed:" , angular_speed)
         
 
     else:		    # stop
-	count=0
+        linear_speed =0
+        angular_speed =0
+
     pub.publish(joystick)
 	
 def start():
