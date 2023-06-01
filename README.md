@@ -105,9 +105,14 @@ Config file folder/config
 
 * **robot_description.launch:** Runs the robot file and starts the joint publisher robot state publisher.
 
-* **world.launch:** Starts rviz customized configuration and gazebo with the customized world , spawns the robot and launches robot_description.
+* **world.launch:** Starts [rviz] customized configuration and gazebo with the customized world , spawns the robot and launches robot_description.
 
-* **amcl.launch:** Runs amcl, move_base, and map_server and sets the initial position of the robot in the map.
+* **joy.launch:** Runs [joy] node with customized joy script.
+
+* **mapping.launch:** Runs [rtabmap] in mapping mode wit args="--delete_db_on_start" and rtabmap visulization.
+
+* **localization.launch:** Runs [rtabmap] in localization mode without args="--delete_db_on_start" in addition to [move_base].
+
 
 ## Packages
 
@@ -150,6 +155,7 @@ Config file folder/config
 
 
 [ROS]: http://www.ros.org
+[rviz]: http://wiki.ros.org/rviz
 [joy]: http://wiki.ros.org/joy
 [teleop_twist_keyboard]: http://wiki.ros.org/teleop_twist_keyboard
 [rtabmap]: http://wiki.ros.org/rtabmap_ros
@@ -159,3 +165,4 @@ Config file folder/config
 [global]: http://wiki.ros.org/navigation/Tutorials/RobotSetup#Global_Configuration:~:text=Global%20Configuration%20(global_costmap)
 [local]: http://wiki.ros.org/navigation/Tutorials/RobotSetup#Local_Configuration:~:text=Local%20Configuration%20(local_costmap)
 [common]: http://wiki.ros.org/navigation/Tutorials/RobotSetup#Global_Configuration:~:text=Common%20Configuration%20(local_costmap)%20%26%20(global_costmap)
+[move_base]: http://wiki.ros.org/move_base
