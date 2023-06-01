@@ -116,9 +116,27 @@ Config file folder/config
 
 ## Packages
 
-* **my_robot:** Contains the URDF of r 4-wheeled under the name of my_robot with the attached sensors in addition to the world with robot embbeded in aldo the modified configuartion files and the world map.
+* **my_robot:** Contains the URDF of r 4-wheeled under the name of my_robot with the attached sensors including depth camera in addition to the world with robot embbeded in aldo the modified configuartion files and the world map.
+
+## Nodes
+
+###joy_teleop
+
+Sends velocity commands to the robot according to the buttons pressed in the joystick
 
 
+#### Subscribed Topics
+
+* **`/cmd_vel`** ([geometry_msgs/Twist])
+
+	The speed to move the robot.
+
+
+#### Published Topics
+
+* **`/joy`** ([sensor_msgs/Joy Message])
+
+	The buttons pressed in the joystick.
 
 ## Structure
 
@@ -166,3 +184,5 @@ Config file folder/config
 [local]: http://wiki.ros.org/navigation/Tutorials/RobotSetup#Local_Configuration:~:text=Local%20Configuration%20(local_costmap)
 [common]: http://wiki.ros.org/navigation/Tutorials/RobotSetup#Global_Configuration:~:text=Common%20Configuration%20(local_costmap)%20%26%20(global_costmap)
 [move_base]: http://wiki.ros.org/move_base
+[geometry_msgs/Twist]: http://docs.ros.org/en/melodic/api/geometry_msgs/html/msg/Twist.html
+[sensor_msgs/Joy Message]: http://docs.ros.org/en/melodic/api/sensor_msgs/html/msg/Joy.html
